@@ -15,5 +15,6 @@ h1 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  position: relative;
+  top: 120px;
 }
