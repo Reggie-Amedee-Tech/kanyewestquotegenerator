@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import KanyeApi from './components/kanyeapi'
+import LandingPage from './views/LandingPage';
+import QuoteSection from './views/QuoteSection'
 
 function App() {
   return (
     <div className="App">
-      <KanyeApi />
+      <div className='container'>
+      <LandingPage />
+      <QuoteSection />
+      </div>
     </div>
   );
 }

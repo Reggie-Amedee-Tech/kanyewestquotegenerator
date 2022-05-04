@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import KanyeWestApiCSS from './KanyeWestApiCSS.css'
 
 const KanyeApiData = () => {
         const [data, setData] = useState([])
-        const [loaded, setLoaded] = useState(false)
+        
 
 
     useEffect(() => {
@@ -10,18 +11,27 @@ const KanyeApiData = () => {
         .then(response => response.json())
         .then(data => {
             setData([data])
-            setLoaded(true)
+            
         })
     }, [])
 
     console.log(data)
+    const randomizeQuote = () => {
+
+    }
 
 
     return <>
+        <div className='quote'>
         {data.map((item) => {
-            return <p key={Math.floor(Math.random() * 200)}>{item.quote}</p>
+            return <div>
+                <p>{`"${item.quote}"`}</p>
+                <p>- Kanye West</p>
+            </div>
+                
+
         })}
-    
+        </div>
     </>
 }
 

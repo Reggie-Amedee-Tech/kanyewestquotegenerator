@@ -1,0 +1,12 @@
+.quote {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+p {
+    font-size: larger;
+    font-style: italic;
+    width: 50vh;
+    text-align: center;
+}
