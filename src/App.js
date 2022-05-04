@@ -6,6 +6,7 @@ import QuoteSection from './views/QuoteSection'
 function App() {
   return (
     <div className="App">
+      <h1>Refresh The Page</h1>
       <div className='container'>
       <LandingPage />
       <QuoteSection />

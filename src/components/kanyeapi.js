@@ -3,6 +3,7 @@ import KanyeWestApiCSS from './KanyeWestApiCSS.css'
 
 const KanyeApiData = () => {
         const [data, setData] = useState([])
+        const [loading, setLoading] = useState(false)
         
 
 
@@ -11,18 +12,17 @@ const KanyeApiData = () => {
         .then(response => response.json())
         .then(data => {
             setData([data])
-            
+            setLoading(true)
         })
     }, [])
 
     console.log(data)
-    const randomizeQuote = () => {
-
-    }
+    
 
 
     return <>
         <div className='quote'>
+            
         {data.map((item) => {
             return <div>
                 <p>{`"${item.quote}"`}</p>

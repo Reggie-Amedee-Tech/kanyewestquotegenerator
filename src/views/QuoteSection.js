@@ -6,8 +6,7 @@ const QuoteSection = () => {
 
 
     return <>
-    <KanyeApi className='quote'/>
-    
+    <KanyeApi className='quote'/> 
     </>
 }
 
