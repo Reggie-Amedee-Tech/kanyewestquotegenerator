@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import LandingPage from './views/LandingPage';
 import QuoteSection from './views/QuoteSection'
+import { BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (

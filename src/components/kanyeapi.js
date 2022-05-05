@@ -9,7 +9,14 @@ const KanyeApiData = () => {
 
     useEffect(() => {
         fetch("https://api.kanye.rest")
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            }
+            throw new Error('Request Failed')
+        }, networkError => {
+            console.log(networkError.message)
+        })
         .then(data => {
             setData([data])
             setLoading(true)
@@ -23,8 +30,8 @@ const KanyeApiData = () => {
     return <>
         <div className='quote'>
             
-        {data.map((item) => {
-            return <div>
+        {data.map((item, i) => {
+            return <div key={i}>
                 <p>{`"${item.quote}"`}</p>
                 <p>- Kanye West</p>
             </div>
